@@ -17,6 +17,7 @@
     color: var(--foreground);
     background: var(--background);
     padding: 1rem;
+    /* flex-grow: 1; */
   }
 
   h1 {
@@ -31,8 +32,12 @@
 
   footer {
     margin-top: 1rem;
-    opacity: 0.3;
-    text-align: right;
+    opacity: 0;
+    /* text-align: right; */
+  }
+
+  footer:hover {
+    opacity: 1;
   }
 
   footer a {

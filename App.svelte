@@ -1,23 +1,30 @@
 <script>
- import Button from "./Button.svelte";
- import Form from "./Form.svelte";
- import "purecss";
+  import Button from "./Button.svelte";
+  import Form from "./Form.svelte";
+  import "purecss";
 </script>
 
 <style>
   :root {
     --primary: #253854;
     --foreground: #333;
-    --background: #eee;
+    --background: #f8f8f8;
+  }
+
+  :global(body) {
+    background: #efefef;
   }
 
   main {
     font-family: sans-serif;
     text-align: center;
     color: var(--foreground);
-    background: var(--background);
+    background: white;
     padding: 1rem;
-    /* flex-grow: 1; */
+    box-shadow: 0px 5px 9px -4px rgba(0, 0, 0, 0.67);
+    border: 1px solid white;
+    background: var(--background);
+    border-radius: 3px;
   }
 
   h1 {
@@ -26,30 +33,32 @@
 
   p {
     margin-top: -1em;
-    margin-bottom: 1.5em;
     opacity: 0.5;
   }
 
   footer {
-    margin-top: 1rem;
-    opacity: 0;
-    /* text-align: right; */
-  }
-
-  footer:hover {
-    opacity: 1;
+    margin-bottom: 1.5rem;
   }
 
   footer a {
     color: #b43c3c;
   }
+
+  .github {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+  }
 </style>
 
 <main>
-	<h1>Wage ⇌ Income ⇌ Salary Calculator</h1>
+  <h1>Wage ⇌ Income ⇌ Salary Calculator</h1>
   <p>For rough estimations &ndash; expect floating-point errors</p>
-	<Form />
   <footer>
-    Made by <a href="https://tymek.cz">Tymek.Cz</a>
+    <a href="https://github.com/Tymek/wis">
+      <img src="/github.svg" alt="GitHub" class="github" />
+      github.com/Tymek/wis
+    </a>
   </footer>
+  <Form />
 </main>
